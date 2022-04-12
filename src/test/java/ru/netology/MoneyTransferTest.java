@@ -67,7 +67,7 @@ class MoneyTransferTest {
     @Test
     void getTrueWishLetterEBriefInName() {
         $("[placeholder=Город]").setValue(DataUser.cityForInput());
-        int inDays = 4;
+        int inDays = 7;
         dataInput(inDays);
         $("[data-test-id=phone]").$("[name=phone]").setValue(DataUser.dataPhone());
         $("[data-test-id=name].input_type_text .input__control").setValue(DataUser.dataNameWishLetterEBrief());

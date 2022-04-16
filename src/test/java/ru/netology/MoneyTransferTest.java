@@ -14,6 +14,7 @@ class MoneyTransferTest {
         SelenideElement data = $("[data-test-id=date]");
         data.$("[value]").doubleClick().sendKeys(Keys.BACK_SPACE);
         data.$("[placeholder]").setValue(DataUser.dataInput(days));
+
     }
 
     @BeforeEach
@@ -24,7 +25,7 @@ class MoneyTransferTest {
     @Test
     void getTrueInputValidForm() {
         $("[placeholder=Город]").setValue(DataUser.cityForInput());
-        int inDays = 4;
+        int inDays = 5;
         dataInput(inDays);
         $("[data-test-id=phone]").$("[name=phone]").setValue(DataUser.dataPhone());
         $("[data-test-id=name].input_type_text .input__control").setValue(DataUser.dataName());
